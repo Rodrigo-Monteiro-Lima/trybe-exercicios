@@ -1,0 +1,3 @@
+A Trybe é um curso de desenvolvimento web
+O curso tem duração de 12 meses
+Nele aprendemos fundamentos,front-end,back-end e início de ciência da computação
