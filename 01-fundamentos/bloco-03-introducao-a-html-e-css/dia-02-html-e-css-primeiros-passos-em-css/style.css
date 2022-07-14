@@ -1,0 +1,37 @@
+h1{
+    color: orange; 
+    font-size: 65px;
+    font-family: sans-serif;
+    text-align: center;  
+ }
+
+ p{
+     font-weight: 600;
+     font-size: 3em;            
+ }
+
+ body{
+     font-size: 16px;
+ }
+
+ ul{
+     background-color: black;
+     line-height: 30px;
+     font-style: italic;
+     text-align: center;
+     text-decoration: underline;
+ }
+
+ .pEul{
+     background-color: aqua;
+ }
+
+ #yellow{
+     background-color: yellow;
+ }
+ #red{
+     background-color: red;
+ }
+ #brown{
+     background-color: brown;
+ }
