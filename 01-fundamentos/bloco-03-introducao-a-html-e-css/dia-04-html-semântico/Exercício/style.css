@@ -28,6 +28,7 @@ nav {
     border-bottom: 1px solid black;
     margin-left: 50px;
     margin-right: 50px;
+    background-color: #EEE;
 }
 
 body {
@@ -83,6 +84,8 @@ footer {
     border-top: 1px solid black;
     margin-left: 50px;
     margin-right: 50px;
+    background-color: #EEE;
+    padding-bottom: 5px;
 }
 
 aside {
