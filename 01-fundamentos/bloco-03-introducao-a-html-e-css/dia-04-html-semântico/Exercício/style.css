@@ -11,6 +11,11 @@ img {
     margin-left: 300px;
 }
 
+ul {
+    display: inline-block;
+    
+}
+
 p {
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
@@ -24,11 +29,10 @@ nav ul li{
 }
 
 nav {
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
-    margin-left: 50px;
-    margin-right: 50px;
+     
     background-color: #EEE;
+    display: inline-block;
+    margin-left: 600px;
 }
 
 body {
@@ -40,9 +44,12 @@ h1, h2, h3 {
 
 }
 
-h1 {
-    text-align: center;    
-    font-size: 35px;
+h1#menu_title {
+    text-align: right;    
+    font-size: 40px;
+    display: inline-block;
+    margin-bottom: 30px;
+    margin-top: 30px;
 }
 
 h2 {
@@ -80,21 +87,45 @@ ol li {
     margin-left: 70px;
 }
 
-footer {
-    border-top: 1px solid black;
-    margin-left: 50px;
-    margin-right: 50px;
+footer {     
     background-color: #EEE;
     padding-bottom: 5px;
+    padding-top: 5px;
 }
 
-aside {
-    margin-left: 50px;
-    margin-bottom: 30px;
-    margin-top: 30px;
-    font-size: 24px;
+aside {    
+   
 }
 
 p#me {
     margin-left: 0px;
+}
+
+section {
+      
+    
+}
+
+#menu {    
+    background-color: #EEE;
+}
+
+nav li:hover {
+    background-color: #DDD;
+    padding: #DDD;
+}
+
+footer p {
+    text-align: center;
+}
+
+header {
+
+}
+
+h1#main_pag {
+    text-align: center;    
+    font-size: 35px;   
+    margin-bottom: 50px;
+    margin-top: 30px;
 }
