@@ -153,12 +153,30 @@ let buttonAdd = document.querySelector('#btn-add');
 let ulList = document.getElementsByTagName('ul.task-list');
 let taskList = document.getElementsByClassName('task-list');
 buttonAdd.addEventListener('click', () => {  
+  if (input.value === '') {
+    alert('Erro, preencha a caixa de texto')
+  } else {
     let item = document.createElement('li');
     let commitment = input.value
     item.innerText = commitment
     taskList[0].appendChild(item); 
   }
+  }
 );
+
+input.addEventListener('keydown', (event) => {
+  if(event.key === 'Enter') {
+    if (input.value === '') {
+      alert('Erro, preencha a caixa de texto')
+    } else {
+      let item = document.createElement('li');
+      let commitment = input.value
+      item.innerText = commitment
+      taskList[0].appendChild(item); 
+    }
+    input.value = '';       
+}
+})
 
 input.addEventListener('click', clear)
 function clear() {
