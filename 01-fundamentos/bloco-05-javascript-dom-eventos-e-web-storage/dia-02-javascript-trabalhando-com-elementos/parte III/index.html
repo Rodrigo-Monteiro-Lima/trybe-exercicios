@@ -20,26 +20,34 @@
     </section>
   </main>
   <script>
-    let father = document.getElementById('pai');
+    let father = document.querySelector('#pai');;
     let fatherList = father.childNodes;
     //let whereRU = document.getElementById('elementoOndeVoceEsta');
-    
-    for (let index = 1; index <= fatherList.length -1; index += 1) {
+    let child = father.lastChild;
+
+    /*while (child) {
+      if (child.id !== 'elementoOndeVoceEsta') {
+        father.removeChild(child);
+      }
+      child = father.lastElementChild;
+    }*/
+
+    for (let index = 0; index < fatherList.length; index += 1) {
       let element = fatherList[index];
       if (element.id === 'elementoOndeVoceEsta') {        
       } else {
-        element.remove();        
+        fatherList[index].remove();        
+        //}
       }
-    }
-    /*for (let index2 = 0; index2 < fatherList.length; index2 += 1) {
-      let element2 = fatherList[index2];
-
-      if (element2.id !== 'elementoOndeVoceEsta' || element2.id === 'quartoEUltimoFilho') {
-        element2.remove();
+      /*for (let index2 = 0; index2 < fatherList.length; index2 += 1) {
+        let element2 = fatherList[index2];
+        
+        if (element2.id !== 'elementoOndeVoceEsta' || element2.id === 'quartoEUltimoFilho') {
+          element2.remove();
+        }*/
       }
-    }*/
-    console.log(fatherList);
-
+      console.log(father);
+      
     </script>
   
 </body>

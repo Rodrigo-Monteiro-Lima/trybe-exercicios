@@ -10,11 +10,10 @@ function createDaysOfTheWeek() {
     weekDaysList.appendChild(dayListItem);
   };
 };
-
 createDaysOfTheWeek();
 
+// Exercício 1
 let decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
-
 function createDays() {
   
   let list = document.getElementById('days');
@@ -35,6 +34,7 @@ function createDays() {
 }
 createDays();
  
+// Exercício 2
 function holidayButton(str) {
   let button = document.createElement('button');
   let buttonContainer = document.getElementsByClassName('buttons-container');
@@ -45,19 +45,15 @@ function holidayButton(str) {
 }
 holidayButton('Feriados');
 
+// Exercício 3
 let holiday = document.querySelectorAll('.holiday');
 let button = document.querySelector('#btn-holiday');
 button.addEventListener("click", changeBackgroundColor);
 let color = 'rgb(238,238,238)';
 let newColor = 'lightgrey';
 //console.log();
-function changeBackgroundColor() {
-  
-  //for (let index = 0; index < listItem.length; index += 1) {
-    //if (listItem[index].className === 'holiday') {
-      //  listItem[5].style.backgroundColor = 'lightgrey';    
-      //}
-      //}
+function changeBackgroundColor() {  
+ 
     for (let index = 0; index < holiday.length; index += 1) {
       let day = holiday[index];            
       if (day.style.backgroundColor === newColor) {
@@ -69,7 +65,7 @@ function changeBackgroundColor() {
 }
 //changeBackgroundColor()
 
-
+// Exercício 4
 function fridayButton(str) {
   let buttonFriday = document.createElement('button');
   let buttonContainer = document.getElementsByClassName('buttons-container');
@@ -80,6 +76,7 @@ function fridayButton(str) {
 }
 fridayButton('Sexta-feira');
 
+// Exercício 5
 let buttonFriday = document.querySelector('#btn-friday');
 buttonFriday.addEventListener('click', changeTextFriday);
 let text = 'Sextou';
@@ -97,6 +94,7 @@ function changeTextFriday() {
 }
 //changeTextFriday()
 
+// Exercício 6
 let list = document.querySelectorAll('.days');
 days.addEventListener('mouseover', mouseOver)
 //console.log(days);
@@ -105,11 +103,12 @@ function mouseOver(event) {
 }
 
 days.addEventListener('mouseout', mouseOut)
-//console.log(days);
+console.log(days);
 function mouseOut(event) { 
   event.target.style.fontSize = '20px';      
 }
 
+// Exercício 7
 let myTasks = document.querySelector('.my-tasks');
 function addTask (str) {
 let text = document.createElement('span');
@@ -118,14 +117,16 @@ myTasks.appendChild(text);
 }
 addTask('terminar esse calendário');
 
+// Exercício 8
 function addColor(str) {
   let task = document.createElement('div');
   task.className = 'task'
   task.style.backgroundColor = str;
   myTasks.appendChild(task);
 }
-addColor('green');
+addColor('red');
 
+// Exercício 9
 let task = document.querySelector('.task');
 task.addEventListener('click', (event) => {
   if (task.className === 'task') {
@@ -135,7 +136,7 @@ task.addEventListener('click', (event) => {
   }   
 });
 
-
+// Exercício 10
 let day = document.querySelector('#days');
 let taskContainer = document.querySelector('.task');
 let dayColor = taskContainer.style.backgroundColor;
@@ -148,22 +149,41 @@ day.addEventListener('click', (event) => {
   }
 })
 
+// Exercício Bônus
 let input = document.querySelector('#task-input');
 let buttonAdd = document.querySelector('#btn-add');
 let ulList = document.getElementsByTagName('ul.task-list');
 let taskList = document.getElementsByClassName('task-list');
 buttonAdd.addEventListener('click', () => {  
+  if (input.value === '') {
+    alert('Erro, preencha a caixa de texto')
+  } else {
     let item = document.createElement('li');
     let commitment = input.value
     item.innerText = commitment
     taskList[0].appendChild(item); 
   }
+}
 );
-
 input.addEventListener('click', clear)
 function clear() {
   input.value = '';
 }
+
+input.addEventListener('keydown', (event) => {
+  if(event.key === 'Enter') {
+    if (input.value === '') {
+      alert('Erro, preencha a caixa de texto')
+    } else {
+      let item = document.createElement('li');
+      let commitment = input.value
+      item.innerText = commitment
+      taskList[0].appendChild(item); 
+    }
+    input.value = '';       
+}
+})
+
 
 
 
