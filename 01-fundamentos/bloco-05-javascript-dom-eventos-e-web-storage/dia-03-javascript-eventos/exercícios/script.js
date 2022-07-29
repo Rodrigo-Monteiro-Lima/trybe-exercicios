@@ -33,9 +33,10 @@ function createDays() {
  }
 }
 createDays();
- 
+
 // Exercício 2
 function holidayButton(str) {
+
   let button = document.createElement('button');
   let buttonContainer = document.getElementsByClassName('buttons-container');
   button.innerText = str;
@@ -51,8 +52,7 @@ let button = document.querySelector('#btn-holiday');
 button.addEventListener("click", changeBackgroundColor);
 let color = 'rgb(238,238,238)';
 let newColor = 'lightgrey';
-//console.log();
-function changeBackgroundColor() {  
+function changeBackgroundColor() {
  
     for (let index = 0; index < holiday.length; index += 1) {
       let day = holiday[index];            
@@ -63,10 +63,10 @@ function changeBackgroundColor() {
       }
   }  
 }
-//changeBackgroundColor()
 
 // Exercício 4
 function fridayButton(str) {
+
   let buttonFriday = document.createElement('button');
   let buttonContainer = document.getElementsByClassName('buttons-container');
   buttonFriday.innerText = str;
@@ -81,6 +81,7 @@ let buttonFriday = document.querySelector('#btn-friday');
 buttonFriday.addEventListener('click', changeTextFriday);
 let text = 'Sextou';
 function changeTextFriday() {
+
   let friday = document.querySelectorAll('.friday');
   let days = [4, 11, 18, 25];
   for (let index = 0; index < friday.length; index += 1) {
@@ -92,18 +93,15 @@ function changeTextFriday() {
     }
   }
 }
-//changeTextFriday()
 
 // Exercício 6
 let list = document.querySelectorAll('.days');
 days.addEventListener('mouseover', mouseOver)
-//console.log(days);
 function mouseOver(event) { 
   event.target.style.fontSize = '25px';      
 }
 
 days.addEventListener('mouseout', mouseOut)
-console.log(days);
 function mouseOut(event) { 
   event.target.style.fontSize = '20px';      
 }
@@ -111,6 +109,7 @@ function mouseOut(event) {
 // Exercício 7
 let myTasks = document.querySelector('.my-tasks');
 function addTask (str) {
+
 let text = document.createElement('span');
 text.innerText = str;
 myTasks.appendChild(text);
@@ -119,6 +118,7 @@ addTask('terminar esse calendário');
 
 // Exercício 8
 function addColor(str) {
+
   let task = document.createElement('div');
   task.className = 'task'
   task.style.backgroundColor = str;
@@ -180,11 +180,6 @@ input.addEventListener('keydown', (event) => {
       item.innerText = commitment
       taskList[0].appendChild(item); 
     }
-    input.value = '';       
-}
+    input.value = '';
+  }
 })
-
-
-
-
-
