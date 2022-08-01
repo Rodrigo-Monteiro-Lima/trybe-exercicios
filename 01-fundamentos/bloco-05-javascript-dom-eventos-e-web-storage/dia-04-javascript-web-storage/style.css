@@ -1,0 +1,49 @@
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+main {
+  display: flex;
+  margin-top: 15px;
+}
+
+article {
+  flex: 6;
+  background-color: white;
+  margin-right: 10px;
+}
+
+article p {
+  padding: 10px;
+  text-align: justify;
+}
+
+aside {
+  border-radius: 15px;
+  flex: 1;
+  height: 515px;
+  box-shadow: 3px 3px 3px gray;
+  background-color: lightgray;
+}
+
+.option {
+  display: flex;
+  justify-content: center;
+}
+
+.selection {
+  display: flex;
+  justify-content: center;
+}
+
+.option-container {
+  
+}
+
