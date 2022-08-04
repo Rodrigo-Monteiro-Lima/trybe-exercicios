@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>Formulário</h1></header>
+  <form action="" method="GET">
+    <fieldset>
+      <legend>Trybe Trip</legend>
+      <label for="name">Nome:
+        <input type="text" name="" id="name" minlength="10" maxlength="40" required placeholder="Digite seu nome aqui">
+      </label>
+      <br>
+      <label for="email">Email:
+        <input type="email" name="" id="email" minlength="10" maxlength="50" required placeholder="Digite seu email aqui">
+      </label>
+      <br>
+      <p>Destino Preferido:</p>
+      <label for="destiny-1">
+        <input type="radio" name="destiny" id="destiny-1" class="radio" required>Cidade
+      </label>
+      <label for="destiny-2">
+        <input type="radio" name="destiny" id="destiny-2" class="radio" required>Campo
+      </label>
+      <label for="destiny-3">
+        <input type="radio" name="destiny" id="destiny-3" class="radio" required>Praia
+      </label>
+      <label for="destiny-4">
+        <input type="radio" name="destiny" id="destiny-4" class="radio" required>Montanhas
+      </label>
+      <br>
+      <br>
+      <label for="text-about-you">Nos conte um pouco sobre você: <br>
+        <textarea name="description" id="text-about-you" cols="48" rows="10" maxlength="500" required placeholder="Digite seu texto aqui"></textarea>
+      </label>
+      <br><br>
+      <label for="data">Data:
+        <input type="date" name="data" id="data" required>
+      </label>
+      <br><br>
+      <label for="trybe-news">Receber Notícias 
+        <input type="checkbox" name="trybe-news" id="trybe-news">Sim
+      </label>  
+      <br>
+      <label for="image-term">Uso de imagem
+        <input type="checkbox" name="image-term" id="image-term" required>Sim
+      </label> 
+    </fieldset>
+    <br>
+    <label for="submit-form">
+      <button type="submit" id="submit-form" name="submit-form" disabled>Enviar</button>
+    </label>
+    <label for="clear-form">
+      <button id="clear-form" name="clear-form">Limpar</button>
+    </label>
+ </form>
+  <script src="script.js"></script>
+</body>
+</html>

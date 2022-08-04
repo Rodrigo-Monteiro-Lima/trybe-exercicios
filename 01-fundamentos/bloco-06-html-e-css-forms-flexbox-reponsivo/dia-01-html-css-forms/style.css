@@ -1,0 +1,11 @@
+fieldset {
+  width: fit-content;
+}
+
+#email {
+  margin-top: 10px;
+}
+
+textarea {
+  margin-top: 10px;
+}
