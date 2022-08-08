@@ -5,3 +5,7 @@
 form {
   border-top: 1px solid black;
 }
+
+label:not(.form-check-label, #date) {
+  width: 100%;
+}
