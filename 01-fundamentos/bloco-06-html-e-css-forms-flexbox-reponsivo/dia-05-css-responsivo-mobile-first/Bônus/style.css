@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+    
+}
+
+body {
+    margin: 0px;
+    padding: 0;
+}
+
+img {
+    width: 50%;
+    margin-left: 300px;
+}
+
+ul {
+    display: inline-block;
+    
+}
+
+p {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: justify;
+    line-height: 30px;
+}
+nav ul li{
+    display: inline-block;
+}
+
+nav {
+     
+    background-color: #EEE;
+    display: inline-block;
+    margin-left: 600px;
+}
+
+body {
+    background-color: gainsboro;
+}
+
+h1, h2, h3 {    
+    margin: 50px;    
+
+}
+
+h1#menu_title {
+    text-align: right;    
+    font-size: 40px;
+    display: inline-block;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 27px;
+}
+
+#reference {
+    margin-bottom: 20px;
+}
+
+
+.links ul li {
+    display: inline-block;    
+    margin: 5px;
+    padding: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+table, td, tr {
+    border: 2px solid grey;
+    font-size: 24px;
+    border-collapse: collapse;
+    margin-left: 50px;
+    padding: 7px;
+}
+
+ol li {
+    margin-left: 70px;
+}
+
+footer {     
+    background-color: #EEE;
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+aside {    
+   
+}
+
+p#me {
+    margin-left: 0px;
+}
+
+section {
+      
+    
+}
+
+#menu {    
+    background-color: #EEE;
+}
+
+nav li:hover {
+    background-color: #DDD;
+    padding: #DDD;
+}
+
+footer p {
+    text-align: center;
+}
+
+header {
+
+}
+
+h1#main_pag {
+    text-align: center;    
+    font-size: 35px;   
+    margin-bottom: 50px;
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 576px) {
+    *, body, html{
+        width: 100%;
+    }
+    .row , header, #menu {
+        width: 100%;
+        margin: 0;
+        height: 178px;
+    }
+
+    nav , img , h1{
+        margin: 0;
+        padding: 0;
+    }
+
+    nav ul {
+        display: flex;
+        padding: 0;
+        margin: 0;
+    }
+
+    #menu {
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        display: flex;
+    }
+    
+    
+}
