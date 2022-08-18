@@ -114,7 +114,7 @@ let text = document.createElement('span');
 text.innerText = str;
 myTasks.appendChild(text);
 }
-addTask('terminar esse calendário');
+addTask('algo');
 
 // Exercício 8
 function addColor(str) {
@@ -141,6 +141,7 @@ let day = document.querySelector('#days');
 let taskContainer = document.querySelector('.task');
 let dayColor = taskContainer.style.backgroundColor;
 let taskSelected = myTasks.lastChild;
+console.log(taskSelected);
 day.addEventListener('click', (event) => {
   if (taskSelected.className === 'task selected' && event.target.style.color !== dayColor) {
     event.target.style.color = dayColor;    
