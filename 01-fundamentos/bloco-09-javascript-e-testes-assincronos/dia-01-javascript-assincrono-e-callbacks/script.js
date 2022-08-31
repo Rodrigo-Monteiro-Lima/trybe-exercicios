@@ -1,4 +1,4 @@
-const { exportAllDeclaration } = require("@babel/types");
+
 
 // // Ex 1
 // const planetDistanceFromSun = ({ name, distanceFromSun: { value, measurementUnit } }) =>
@@ -189,42 +189,41 @@ function getPokemonDetails(selectedPokemon, callback) {
 
   setTimeout(() => {
     if (foundPokemon === undefined) {
-      return callback(new Error('Não temos esse pokémon para você :('), null);
+    return callback(new Error('Não temos esse pokémon para você :('), null);    
     }
 
     const { name, type, ability } = foundPokemon;
 
     const messageFromProfOak = `Olá, seu pokémon é o ${name}, o tipo dele é ${type} e a habilidade principal dele é ${ability}`;
-
     callback(null, messageFromProfOak);
   }, 2000);
 }
 
 const handlePokemonSearch = (error, message) => {
-  if (message) {
+    if (message) {
     console.log(message);
   } else {
     console.log(error);
   }
 };
 
-// getPokemonDetails('Charmander', handlePokemonSearch);
+//console.log(getPokemonDetails('Charmander', handlePokemonSearch));
 // getPokemonDetails('Squirtle', handlePokemonSearch);
-// getPokemonDetails('Bulbasaur', handlePokemonSearch);
-// getPokemonDetails('Mew', handlePokemonSearch);
+//getPokemonDetails('Charmander', handlePokemonSearch);
+//console.log(getPokemonDetails('Mew', handlePokemonSearch));
 
 //Ex 10
-beforeEach(() => console.log('1 - beforeEach'));
-afterEach(() => console.log('1 - afterEach'));
+// beforeEach(() => console.log('1 - beforeEach'));
+// afterEach(() => console.log('1 - afterEach'));
 
-test('', () => console.log('1 - test'));
+// test('', () => console.log('1 - test'));
 
-describe('Scoped / Nested block', () => {
-  beforeEach(() => console.log('2 - beforeEach'));
-  afterEach(() => console.log('2 - afterEach'));
+// describe('Scoped / Nested block', () => {
+//   beforeEach(() => console.log('2 - beforeEach'));
+//   afterEach(() => console.log('2 - afterEach'));
 
-  test('', () => console.log('2 - test'));
-});
+//   test('', () => console.log('2 - test'));
+// });
 
 //Saída '1 - beforeEach', '1 - test', '1 - afterEach', '1 - beforeEach', '2 - beforeEach', '2 - test', '2 - afterEach', '1 - afterEach'
 

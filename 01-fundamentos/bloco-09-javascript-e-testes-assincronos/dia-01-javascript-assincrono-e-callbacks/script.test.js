@@ -15,7 +15,7 @@ it('testa se retorna a string toda em caps', (done) => {
 
 describe('A função getPokemonDetails', () => {
   it('retorna erro quando procuramos um pokémon que não existe no banco de dados', (done) => {
-    getPokemonDetails('Cr', (error, message) => {
+    getPokemonDetails('Lucario', (error, message) => {
       try {
         expect(error).toEqual(new Error('Não temos esse pokémon para você :('));
         done();
