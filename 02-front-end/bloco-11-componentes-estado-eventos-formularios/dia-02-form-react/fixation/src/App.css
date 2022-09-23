@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  width: 300px;
+}
+
+fieldset {
+  width: fit-content;
+  padding: 20px;
+}
