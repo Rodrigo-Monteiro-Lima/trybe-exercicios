@@ -18,6 +18,7 @@ class App extends Component {
   render() {
     const { isFetching, info, dispatch } = this.props;
     const {name} = this.state;
+    console.log(info);
     if (isFetching) return <p>Loading</p>;
     return (
       <div>
@@ -38,7 +39,7 @@ class App extends Component {
             Buscar
           </button>
         </div>
-        {info && !isFetching && (
+        {info.length !== 0 && !isFetching && (
           <div>
             <p>Name: {info.name}</p>
             <p>Gender: {info.gender}</p>
