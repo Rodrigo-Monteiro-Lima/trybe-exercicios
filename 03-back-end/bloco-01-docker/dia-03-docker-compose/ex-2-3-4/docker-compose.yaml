@@ -1,0 +1,32 @@
+version: '3'
+services:
+  gb:
+    image: ghost:1-alpine
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - 2368:2368
+    environment:
+        database__client: mysql
+        database__connection__host: db
+        database__connection__user: root
+        database__connection__password: password
+        database__connection__database: ghost
+    networks:
+      - my-network
+  db:
+    platform: linux/x86_64
+    image: mysql:5.7
+    restart: always
+    environment:
+        MYSQL_ROOT_PASSWORD: password
+    volumes:
+      - dados-do-banco:/var/lib/mysql
+    networks:
+      - my-network
+volumes:
+  dados-do-banco:
+
+networks:
+  my-network:
