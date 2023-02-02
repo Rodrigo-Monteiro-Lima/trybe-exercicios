@@ -71,6 +71,35 @@ const getChocolatesByBrand = async (brandId) => {
     .filter((chocolate) => chocolate.brandId === brandId);
 };
 
+const createChocolate = async (name, brandId) => {
+  const cacauTrybe = await readCacauTrybeFile();
+  const newChocolate = { id: cacauTrybe.nextChocolateId, name, brandId };
+  
+  cacauTrybe.chocolates.push(newChocolate);
+  cacauTrybe.nextChocolateId += 1;
+  await writeCacauTrybeFile(cacauTrybe);
+
+  return newChocolate;
+};
+
+const deleteChocolate = async (id) => {
+  const cacauTrybe = await readCacauTrybeFile();
+  const chocolateExists = cacauTrybe.chocolates.some(
+    (chocolate) => chocolate.id === id,
+  );
+
+  if (chocolateExists) {
+    cacauTrybe.chocolates = cacauTrybe.chocolates.filter(
+      (chocolate) => chocolate.id !== id,
+    );
+  
+    await writeCacauTrybeFile(cacauTrybe);
+    return true;
+  }
+
+  return false;
+};
+
 module.exports = {
     getAllChocolates,
     getChocolateById,
@@ -78,4 +107,6 @@ module.exports = {
     getTotalChocolates,
     getSearchedChocolates,
     updateChocolate,
+    createChocolate,
+    deleteChocolate,
 };

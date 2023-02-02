@@ -45,4 +45,10 @@ app.put('/chocolates/:id', async (req, res) => {
   res.status(200).json({ chocolate }); 
 });
 
+app.post('/chocolates', async (req, res) => {
+  const { name, brandId} = req.body;
+  const newChocolate = await cacauTrybe.createChocolate(name, brandId);
+  res.status(201).json(newChocolate);
+})
+
 module.exports = app;

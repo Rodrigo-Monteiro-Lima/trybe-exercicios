@@ -50,12 +50,14 @@ const mockFile = JSON.stringify({
       brandId: 3,
     },
   ],
+  nextChocolateId: 5,
 });
 
 describe('Usando o método GET em /chocolates', function () {
   beforeEach(function () {
     sinon.stub(fs.promises, 'readFile')
       .resolves(mockFile);
+    sinon.stub(fs.promises, 'writeFile').resolves();
   });
 
   afterEach(function () {
@@ -200,4 +202,24 @@ describe('Usando o método GET em /chocolates', function () {
       });
     });
   });
+  describe('Usando o método POST em /chocolates para criar um novo chocolate', function(){
+    it('Criar um chocolate Trybe', async function() {
+      const expectedStatus = 201;
+      const expectedResponse = {
+        id: 5,
+        name: 'Trybe Chocolate',
+        brandId: 1
+      };
+      const requestBody = {
+        name: 'Trybe Chocolate',
+        brandId: 1
+      }
+      const response = await chai
+        .request(app)
+        .post('/chocolates')
+        .send(requestBody);
+      expect(response.status).to.be.equal(expectedStatus);
+      expect(response.body).to.be.deep.equal(expectedResponse);
+    })
+  })
 });
