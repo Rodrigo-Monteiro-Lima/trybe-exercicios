@@ -12,6 +12,7 @@ services:
     restart: always
     # Diretório padrão de execução
     working_dir: /app
+    tty: true
     # Lista de volumes (diretórios) mapeados de fora para dentro do container
     volumes:
       # Monta o diretório atual, com todos os dados da aplicação, dentro do diretório /app

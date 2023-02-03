@@ -13,7 +13,7 @@ const connection = mysql.createPool({
   port: 3306,
   user: 'root',
   password: 'root',
-  databae: 'trybecashdb',
+  database: 'trybecashdb',
   waitForConnections: true,
   connectionLimit: 10,
   queueLimit: 0,
