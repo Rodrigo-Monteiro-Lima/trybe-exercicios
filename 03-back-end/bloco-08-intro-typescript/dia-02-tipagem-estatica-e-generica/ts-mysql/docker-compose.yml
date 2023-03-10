@@ -1,0 +1,14 @@
+version: '3'
+services:
+  database:
+    image: mysql:8.0.29
+    container_name: models_ts
+    restart: always
+    environment:
+      MYSQL_HOST: localhost
+      MYSQL_ROOT_PASSWORD: senha-mysql
+      MYSQL_DATABASE: books_api
+    ports:
+      - 3306:3306
+    volumes:
+      - ./script.sql:/docker-entrypoint-initdb.d/script.sql

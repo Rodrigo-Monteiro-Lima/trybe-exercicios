@@ -1,0 +1,25 @@
+{
+  "name": "ts-sequelize",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "db:reset": "npx -y tsc && npx sequelize-cli db:drop && npx sequelize-cli db:create && npx sequelize-cli db:migrate && npx sequelize-cli db:seed:all"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/sequelize": "4.28",
+    "dotenv": "10.0",
+    "readline-sync": "1.4",
+    "sequelize": "6.3",
+    "typescript": "^4.9.5"
+  },
+  "devDependencies": {
+    "@tsconfig/node16": "^1.0.3",
+    "@types/node": "^18.15.0",
+    "mysql2": "2.3",
+    "sequelize-cli": "6.2"
+  }
+}

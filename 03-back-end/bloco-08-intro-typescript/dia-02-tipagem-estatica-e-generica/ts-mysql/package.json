@@ -1,0 +1,25 @@
+{
+  "name": "ts-mysql",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx tsc && node ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/mysql": "^2.15.21",
+    "dotenv": "10.0",
+    "mysql2": "2.3",
+    "readline-sync": "1.4",
+    "typescript": "^4.9.5"
+  },
+  "devDependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/node": "^18.15.0",
+    "@types/readline-sync": "^1.4.4"
+  }
+}
