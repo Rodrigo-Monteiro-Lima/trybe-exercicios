@@ -12,15 +12,15 @@ services:
   node:
     build: .
     environment:
-      - DATABASE_HOST=localhost
+      - DATABASE_HOST=db
       - DATABASE_USER=root
       - DATABASE_PASSWORD=senha-mysql
       - DATABASE_NAME=TypeScriptExpress
       - APP_PORT=3001
       - JWT_SECRET=segredo
     ports:
-      - 3001:3001
-    restart: 'always'
+      - 5500:3001
+    restart: always
     depends_on:
       - db
     volumes:
