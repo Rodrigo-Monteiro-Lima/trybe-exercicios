@@ -1,0 +1,31 @@
+version: '3.9'
+services:
+  db:
+    image: mysql:8.0.23
+    environment:
+      - MYSQL_ROOT_PASSWORD=senha-mysql
+    restart: always
+    networks:
+      - express-ts
+    ports:
+      - 3306:3306
+  node:
+    build: .
+    environment:
+      - DATABASE_HOST=localhost
+      - DATABASE_USER=root
+      - DATABASE_PASSWORD=senha-mysql
+      - DATABASE_NAME=TypeScriptExpress
+      - APP_PORT=3001
+      - JWT_SECRET=segredo
+    ports:
+      - 3001:3001
+    restart: 'always'
+    depends_on:
+      - db
+    volumes:
+      - ./script.sql:/docker-entrypoint-initdb.d/script.sql
+    networks:
+      - express-ts
+networks:
+  express-ts: {}
