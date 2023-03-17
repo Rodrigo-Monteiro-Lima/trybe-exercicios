@@ -1,0 +1,24 @@
+{
+  "name": "herenca",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon --watch \"./**\" --ext \"ts,js\" --ignore \"./**/*.spec.ts,./**/*.json\" --exec \"ts-node index.ts\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.15.3",
+    "nodemon": "^2.0.21",
+    "ts-jest": "27.0.7",
+    "ts-node-dev": "1.1.8",
+    "typescript": "4.4.3"
+  },
+  "dependencies": {
+    "@org-formation/tombok": "^0.0.1",
+    "typescript-ioc": "^3.2.2"
+  }
+}
